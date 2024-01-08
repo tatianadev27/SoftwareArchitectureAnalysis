@@ -25,7 +25,7 @@ class PushNotification implements INotification {
     }
 }
 
-// Step 3: Factory
+// Step 3: Factory Interface
 enum NotificationType {
     Email = "email",
     SMS = "sms",
@@ -37,7 +37,12 @@ interface NotificationConfig {
     implementation: new () => INotification;
 }
 
-class NotificationFactory {
+interface INotificationFactory {
+    createNotification(type: NotificationType): INotification;
+}
+
+// Step 3: Concrete Factory
+class NotificationFactory implements INotificationFactory {
     private static notificationTypes: NotificationConfig[] = [
         { type: NotificationType.Email, implementation: EmailNotification },
         { type: NotificationType.SMS, implementation: SMSNotification },
@@ -45,8 +50,8 @@ class NotificationFactory {
         // Add more types here
     ];
 
-    static createNotification(type: NotificationType): INotification {
-        const config = this.notificationTypes.find((n) => n.type === type);
+    createNotification(type: NotificationType): INotification {
+        const config = NotificationFactory.notificationTypes.find((n) => n.type === type);
 
         if (config) {
             return new config.implementation();
@@ -57,16 +62,22 @@ class NotificationFactory {
 }
 
 // Step 4: Client Code
-function main() {
-    const emailNotification = NotificationFactory.createNotification(NotificationType.Email);
+function main(notificationFactory: INotificationFactory) {
+    // Create instances using the factory
+    const emailNotification = notificationFactory.createNotification(NotificationType.Email);
+    const smsNotification = notificationFactory.createNotification(NotificationType.SMS);
+    const pushNotification = notificationFactory.createNotification(NotificationType.Push);
+
+    // Use the created instances
     emailNotification.send();
-
-    const smsNotification = NotificationFactory.createNotification(NotificationType.SMS);
     smsNotification.send();
-
-    const pushNotification = NotificationFactory.createNotification(NotificationType.Push);
     pushNotification.send();
 }
+
+// Run the client code with the NotificationFactory
+const notificationFactory = new NotificationFactory();
+main(notificationFactory);
+
 
 // Run the client code
 main();

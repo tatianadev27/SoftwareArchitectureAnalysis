@@ -10,12 +10,6 @@ This repository contains a TypeScript implementation of the Factory Method desig
 
 # Factory Method Pattern Example in TypeScript
 
-## Overview
-
-This repository contains a TypeScript implementation of the Factory Method design pattern. The Factory Method pattern is a creational pattern that provides an interface for creating instances of a class, allowing subclasses to alter the type of objects that will be created.
-
-## Implementation Details
-
 ### Step 1: Product Interface
 
 The `INotification` interface defines the contract for notification products. It declares a `send` method that concrete products must implement.

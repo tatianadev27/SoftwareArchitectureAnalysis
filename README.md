@@ -100,9 +100,9 @@ Clean Architecture principles are incorporated to separate concerns into distinc
 
 
 ## References
-#### https://refactoring.guru/design-patterns
+#### - https://refactoring.guru/design-patterns
 
-#### Design Patterns: Elements of Reusable Object-Oriented Software
+#### - Design Patterns: Elements of Reusable Object-Oriented Software
 Author(s): Erich Gamma, Richard Helm, Ralph Johnson, John M. Vlissides
 Publisher: Addison-Wesley Professional, Year: 1994
 

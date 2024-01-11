@@ -98,3 +98,9 @@ Event-Driven Architecture is used to build loosely coupled systems where compone
 
 Clean Architecture principles are incorporated to separate concerns into distinct layers: entities, use cases, and interfaces. This promotes maintainability, testability, and adaptability to changes.
 
+
+## References
+https://refactoring.guru/design-patterns
+
+
+

@@ -5,7 +5,8 @@
 This repository contains a TypeScript implementation of the Factory Method design pattern. The Factory Method pattern is a creational pattern that provides an interface for creating instances of a class, allowing subclasses to alter the type of objects that will be created.
 
 ## Implementation Details
-![image](https://github.com/tatianadev27/SoftwareArchitectureAnalysis/assets/54762147/4a01d48b-071f-401a-a069-1023caa16640)
+![image](https://github.com/tatianadev27/SoftwareArchitectureAnalysis/assets/54762147/289c11dd-a575-458a-a7c0-7dc4fb0ce3f8)
+
 
 # Factory Method Pattern Example in TypeScript
 

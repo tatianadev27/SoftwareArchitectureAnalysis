@@ -5,6 +5,7 @@
 This repository contains a TypeScript implementation of the Singleton Pattern, a design pattern that ensures a class has only one instance and provides a global point of access to it. The example follows SOLID principles, including the Single Responsibility Principle (SRP), Open/Closed Principle (OCP), Dependency Inversion Principle (DIP), and Interface Segregation Principle (ISP).
 
 ## Implementation Details
+![image](https://github.com/tatianadev27/SoftwareArchitectureAnalysis/assets/54762147/e55ce60b-9299-4ca7-92a9-baf3e53a0120)
 
 
 # Singleton Method Pattern Example in TypeScript
